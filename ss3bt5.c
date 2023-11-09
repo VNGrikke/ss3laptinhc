@@ -4,14 +4,10 @@ int main(){
 	int A;
 	printf("nhap so co 4 chu so: ",A);
 	scanf("%d",&A);
-	printf("nhap so hang nghin: ",thousandDigit);
-	scanf("%d",&thousandDigit);
-	printf("nhap so hang tram: ",hundredDigit);
-	scanf("%d",&hundredDigit);
-	printf("nhap so hang chuc: ",dozenDigit);
-	scanf("%d",&dozenDigit);
-	printf("nhap so hang don vi: ",unitDigit);
-	scanf("%d",&unitDigit);
+	thousandDigit = (A%10000)/1000;
+	hundredDigit = (A%1000)/100;
+	dozenDigit = (A%100)/10;
+	unitDigit = A%10;
 	int total = thousandDigit + hundredDigit + dozenDigit + unitDigit;
 	int reverse = unitDigit*1000 + dozenDigit*100 + hundredDigit*10 + thousandDigit;
 	printf("tong cac chu so: %d",total);
